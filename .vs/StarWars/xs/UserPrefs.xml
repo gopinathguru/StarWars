@@ -11,7 +11,7 @@
       <File FileName="Assets/Scripts/DamageDealer.cs" Line="16" Column="29" />
       <File FileName="Assets/Scripts/Enemy.cs" Line="51" Column="9" />
       <File FileName="Assets/Scripts/Shredder.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/BackgroundScroller.cs" Line="7" Column="7" />
+      <File FileName="Assets/Scripts/BackgroundScroller.cs" Line="22" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
