@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4920125604097696}
   - component: {fileID: 212489250730552808}
-  - component: {fileID: 114929316878331768}
-  - component: {fileID: 58578475057260502}
-  m_Layer: 0
+  - component: {fileID: 114792220119428974}
+  - component: {fileID: 60941058949176990}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,8 +42,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58578475057260502
-CircleCollider2D:
+--- !u!60 &60941058949176990
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,9 +55,42 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.56
---- !u!114 &114929316878331768
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.12, y: 0.75}
+    newSize: {x: 1.12, y: 0.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.48, y: -0.275}
+      - {x: 0.5621766, y: -0.09287834}
+      - {x: 0.56, y: -0.095}
+      - {x: 0.56, y: -0.041651726}
+      - {x: 0.49333704, y: -0.009430885}
+      - {x: 0.37333697, y: 0.030569077}
+      - {x: 0.11555805, y: 0.18280125}
+      - {x: 0.06002218, y: 0.3216853}
+      - {x: 0.033348214, y: 0.3772211}
+      - {x: -0.038917318, y: 0.37055826}
+      - {x: -0.11116051, y: 0.19386196}
+      - {x: -0.19999999, y: 0.145}
+      - {x: -0.19866115, y: 0.1465683}
+      - {x: -0.56222093, y: -0.05053568}
+      - {x: -0.544453, y: -0.12167406}
+      - {x: -0.53884757, y: -0.13786888}
+      - {x: -0.4933593, y: -0.1783371}
+      - {x: -0.36668515, y: -0.35056973}
+      - {x: -0.1666852, y: -0.29835987}
+      - {x: -0.1277901, y: -0.375}
+      - {x: 0.14, y: -0.375}
+      - {x: 0.19, y: -0.325}
+      - {x: 0.32, y: -0.355}
+      - {x: 0.39, y: -0.36499998}
+--- !u!114 &114792220119428974
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c06fc95eaaea84a73abbb4f9a018c278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 10000
   playerSpeed: 10
-  padding: 1
   playerLaser: {fileID: 1299214656209032, guid: 8819c7269211944129bba88c9cd38954,
     type: 2}
   projectileSpeed: 10

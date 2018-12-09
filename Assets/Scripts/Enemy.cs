@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour {
 
     [Header("Enemy")]
     [SerializeField] int health = 500;
+    [SerializeField] GameObject explosionVFX;
 
     [Header("Enemy Laser settings:")]
     [SerializeField] float shotCounter;
@@ -52,6 +53,10 @@ public class Enemy : MonoBehaviour {
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
         if (health <= 0)
+        {
+            GameObject explosionEffect = Instantiate(explosionVFX, transform.position, Quaternion.identity) as GameObject;
+            Destroy(explosionEffect, 1f);
             Destroy(gameObject);
+        }
     }
 }
