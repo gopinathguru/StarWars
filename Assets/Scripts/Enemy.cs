@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour {
     [Header("Enemy")]
     [SerializeField] int health = 500;
     [SerializeField] GameObject explosionVFX;
+    [SerializeField] AudioClip explosionAFX;
+    [SerializeField] float explosionVolume=1f;
 
     [Header("Enemy Laser settings:")]
     [SerializeField] float shotCounter;
@@ -56,6 +58,8 @@ public class Enemy : MonoBehaviour {
         {
             GameObject explosionEffect = Instantiate(explosionVFX, transform.position, Quaternion.identity) as GameObject;
             Destroy(explosionEffect, 1f);
+            AudioSource.PlayClipAtPoint(explosionAFX, Camera.main.transform.position, explosionVolume);
+
             Destroy(gameObject);
         }
     }

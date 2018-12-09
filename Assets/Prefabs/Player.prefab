@@ -101,10 +101,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c06fc95eaaea84a73abbb4f9a018c278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10000
+  health: 1000
   playerSpeed: 10
+  playerDeathAFX: {fileID: 8300000, guid: d975a5d4e680040ada495c2438631456, type: 3}
+  playerDeathAFXVolume: 1
   playerLaser: {fileID: 1299214656209032, guid: 8819c7269211944129bba88c9cd38954,
     type: 2}
+  playerLaserSound: {fileID: 8300000, guid: 66440bd6f9003438ba4f3be7b08f4d76, type: 3}
+  playerLaserSoundVolume: 0.1
   projectileSpeed: 10
   projectileFiringPeriod: 0.1
 --- !u!212 &212489250730552808

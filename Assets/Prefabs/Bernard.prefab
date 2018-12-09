@@ -81,6 +81,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 500
+  explosionVFX: {fileID: 1079980122165046, guid: 3d4256fcf1ebb4a97b965c32c99afaef,
+    type: 2}
+  explosionAFX: {fileID: 8300000, guid: 0a4f0e9ed66354f8fac92ecc9a08489a, type: 3}
+  explosionVolume: 1
   shotCounter: 1
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
