@@ -91,8 +91,12 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(playerDeathAFX, Camera.main.transform.position, playerDeathAFXVolume);
             FindObjectOfType<Level>().LoadEndGame();
-            FindObjectOfType<GameStatus>().ResetScore();
         }
+    }
+
+    public int GetPlayerHealth()
+    {
+        return health;
     }
 
 }

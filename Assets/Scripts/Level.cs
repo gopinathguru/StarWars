@@ -12,7 +12,9 @@ public class Level : MonoBehaviour {
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("StarWars");
+        SceneManager.LoadScene("StarWars");  
+        FindObjectOfType<GameStatus>().ResetGame();
+
     }
     public void LoadEndGame()
     {

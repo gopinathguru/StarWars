@@ -26,7 +26,7 @@ public class GameStatus : MonoBehaviour {
 
     }
 
-    public void ResetScore()
+    public void ResetGame()
     {
         Destroy(gameObject);
     }
@@ -35,6 +35,8 @@ public class GameStatus : MonoBehaviour {
     {
         return score;
     }
+
+
 
     public void AddToScore(int scoreValue)
     {

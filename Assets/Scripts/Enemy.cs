@@ -63,9 +63,9 @@ public class Enemy : MonoBehaviour {
             GameObject explosionEffect = Instantiate(explosionVFX, transform.position, Quaternion.identity) as GameObject;
             Destroy(explosionEffect, 1f);
             AudioSource.PlayClipAtPoint(explosionAFX, Camera.main.transform.position, explosionVolume);
+            FindObjectOfType<GameStatus>().AddToScore(scoreValue);
 
             Destroy(gameObject);
-            FindObjectOfType<GameStatus>().AddToScore(scoreValue);
         }
     }
 }
