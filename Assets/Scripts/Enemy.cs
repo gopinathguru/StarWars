@@ -6,17 +6,20 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     [Header("Enemy")]
-    [SerializeField] int health = 500;
+    [SerializeField] [Range(100, 10000)] int health = 500;
     [SerializeField] GameObject explosionVFX;
     [SerializeField] AudioClip explosionAFX;
-    [SerializeField] float explosionVolume=1f;
+    [SerializeField] [Range(0f,1f)] float explosionVolume=1f;
+    [SerializeField] int scoreValue = 150;
 
     [Header("Enemy Laser settings:")]
     [SerializeField] float shotCounter;
-    [SerializeField] float minTimeBetweenShots = 0.2f;
-    [SerializeField] float maxTimeBetweenShots = 3f;
+    [SerializeField] [Range(0f, 1f)] float minTimeBetweenShots = 0.2f;
+    [SerializeField] [Range(0f, 10f)] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject enemyLaser;
-    [SerializeField] float projectileSpeed = 10f;
+    [SerializeField] [Range(0f, 50f)] float projectileSpeed = 10f;
+    [SerializeField] AudioClip enemyLaserSound;
+    [SerializeField] [Range(0f, 1f)] float enemyLaserSoundVolume = 1f;
 
     // Use this for initialization
     void Start () {
@@ -38,6 +41,7 @@ public class Enemy : MonoBehaviour {
     {
         GameObject laser = Instantiate(enemyLaser, transform.position, Quaternion.identity) as GameObject;
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
+        AudioSource.PlayClipAtPoint(enemyLaserSound, Camera.main.transform.position, enemyLaserSoundVolume);
 
     }
 
@@ -61,6 +65,7 @@ public class Enemy : MonoBehaviour {
             AudioSource.PlayClipAtPoint(explosionAFX, Camera.main.transform.position, explosionVolume);
 
             Destroy(gameObject);
+            FindObjectOfType<GameStatus>().AddToScore(scoreValue);
         }
     }
 }

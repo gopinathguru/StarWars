@@ -109,8 +109,8 @@ MonoBehaviour:
     type: 2}
   playerLaserSound: {fileID: 8300000, guid: 66440bd6f9003438ba4f3be7b08f4d76, type: 3}
   playerLaserSoundVolume: 0.1
-  projectileSpeed: 10
-  projectileFiringPeriod: 0.1
+  projectileSpeed: 20
+  projectileFiringPeriod: 0.05
 --- !u!212 &212489250730552808
 SpriteRenderer:
   m_ObjectHideFlags: 1

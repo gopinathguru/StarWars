@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114457919485770146}
   - component: {fileID: 58997046487591088}
   - component: {fileID: 114920573871612362}
+  - component: {fileID: 50399817581420996}
+  - component: {fileID: 114281990263405456}
   m_Layer: 9
   m_Name: Bernard
   m_TagString: Untagged
@@ -43,6 +45,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50399817581420996
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1637315634176038}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58997046487591088
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -52,12 +74,24 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.485
+--- !u!114 &114281990263405456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1637315634176038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adfd84a7744044c929f7bc0d4f8485ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
 --- !u!114 &114457919485770146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -84,12 +118,14 @@ MonoBehaviour:
   explosionVFX: {fileID: 1079980122165046, guid: 3d4256fcf1ebb4a97b965c32c99afaef,
     type: 2}
   explosionAFX: {fileID: 8300000, guid: 0a4f0e9ed66354f8fac92ecc9a08489a, type: 3}
-  explosionVolume: 1
+  explosionVolume: 0.33
   shotCounter: 1
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
   enemyLaser: {fileID: 1851580649516696, guid: c8767a13d37064cd9967289956f06c61, type: 2}
   projectileSpeed: 10
+  enemyLaserSound: {fileID: 8300000, guid: e2f8a454813a14148bbb7acc17967c22, type: 3}
+  enemyLaserSoundVolume: 0.34
 --- !u!212 &212200094824346230
 SpriteRenderer:
   m_ObjectHideFlags: 1

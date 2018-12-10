@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/StartMenu.unity
+    guid: e81484e9628fd4b56a1c8cf88743b161
+  - enabled: 1
+    path: Assets/Scenes/StarWars.unity
+    guid: f43f4ad68cb4346efa5c851a523f5e3f
+  - enabled: 1
+    path: Assets/Scenes/QuitGame.unity
+    guid: 0f81e6f5474dd4038ab7288acfec49d3
   m_configObjects: {}

@@ -3,20 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour 
+{
 
     [Header("Player settings:")]
-    [SerializeField] int health = 1000;
-    [SerializeField] float playerSpeed = 10f;
+    [SerializeField] [Range(100, 10000)] int health = 1000;
+    [SerializeField] [Range(1f, 50f)] float playerSpeed = 10f;
     [SerializeField] AudioClip playerDeathAFX;
     [SerializeField] float playerDeathAFXVolume = 1f;
 
     [Header("Player Laser")]
     [SerializeField] GameObject playerLaser;
     [SerializeField] AudioClip playerLaserSound;
-    [SerializeField] float playerLaserSoundVolume = 1f;
-    [SerializeField] float projectileSpeed = 10f;
-    [SerializeField] float projectileFiringPeriod = 0.1f;
+    [SerializeField] [Range(0f,1f)] float playerLaserSoundVolume = 1f;
+    [SerializeField] [Range(0f, 100f)] float projectileSpeed = 10f;
+    [SerializeField] [Range(0f, 1f)] float projectileFiringPeriod = 0.1f;
 
     float padding = 1f;
     Coroutine firingCoroutine;
@@ -89,8 +90,8 @@ public class Player : MonoBehaviour {
         {
             Destroy(gameObject);
             AudioSource.PlayClipAtPoint(playerDeathAFX, Camera.main.transform.position, playerDeathAFXVolume);
+            FindObjectOfType<Level>().LoadEndGame();
         }
-        }
-
-
     }
+
+}
